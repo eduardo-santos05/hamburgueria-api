@@ -12,7 +12,7 @@ router.get("/pedidos", async (req, res) => {
         let pedidos = await Pedido.find()
         res.send(pedidos)
     } catch (erro) {
-        res.status(400).send({ erro: erro.message })
+        res.status(500).send({ erro: erro.message })
     }
 })
 
